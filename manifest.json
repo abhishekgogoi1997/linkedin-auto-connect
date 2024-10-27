@@ -11,6 +11,12 @@
       "default_popup": "popup.html",
       "default_icon": "share.png"
     },
+    "icons": {
+        "16": "share.png",
+        "32": "share.png",
+        "48": "share.png",
+        "128": "share.png"
+    },
     "content_scripts": [
       {
         "matches": ["*://*.linkedin.com/*"],

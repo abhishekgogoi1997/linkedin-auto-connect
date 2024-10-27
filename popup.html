@@ -11,24 +11,6 @@
     <button id="start">Start Auto Connect</button>
     <button id="stop">Stop Auto Connect</button>
 
-    <script>
-        document.getElementById('start').addEventListener('click', () => {
-            chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-                chrome.scripting.executeScript({
-                    target: {tabId: tabs[0].id},
-                    func: () => setInterval(autoConnect, 5000) // Start the auto-connect
-                });
-            });
-        });
-
-        document.getElementById('stop').addEventListener('click', () => {
-            chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-                chrome.scripting.executeScript({
-                    target: {tabId: tabs[0].id},
-                    func: () => clearInterval(autoConnect) // Stop the auto-connect
-                });
-            });
-        });
-    </script>
+    <script src = "content.js"></script>
 </body>
 </html>
