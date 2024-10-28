@@ -12,6 +12,11 @@ document.getElementById('start').addEventListener('click', () => {
                       
                       connectButtons.forEach(button => {
                           button.click();
+                          const noteButton = document.querySelector('button[aria-label*="Send without a note"]');
+                          if(noteButton !== null){
+                            noteButton.click();
+                            console.log('Sent connection without note');
+                          }
                           console.log('Clicked Connect!');
                       });
                   }, 5000);
